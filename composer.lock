@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f037449f37bd611857c5cd4b5335a1ad",
+    "hash": "60f3413018eecdbe6f64457e5c7acf0c",
     "packages": [
         {
             "name": "adammbalogh/key-value-store",
-            "version": "dev-master",
+            "version": "0.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/adammbalogh/key-value-store.git",
-                "reference": "e070e9e30aff39952b9ce1ca11ec8203d4431a49"
+                "reference": "97e67e9cfe8011722ee1d74578dc97e6e4328e84"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/adammbalogh/key-value-store/zipball/e070e9e30aff39952b9ce1ca11ec8203d4431a49",
-                "reference": "e070e9e30aff39952b9ce1ca11ec8203d4431a49",
+                "url": "https://api.github.com/repos/adammbalogh/key-value-store/zipball/97e67e9cfe8011722ee1d74578dc97e6e4328e84",
+                "reference": "97e67e9cfe8011722ee1d74578dc97e6e4328e84",
                 "shasum": ""
             },
             "require": {
@@ -33,6 +33,7 @@
             "suggest": {
                 "adammbalogh/key-value-store-file": "For using File storage",
                 "adammbalogh/key-value-store-memcached": "For using Memcached storage",
+                "adammbalogh/key-value-store-null": "For using Null storage",
                 "adammbalogh/key-value-store-redis": "For using Redis storage"
             },
             "type": "library",
@@ -61,26 +62,26 @@
                 "store",
                 "value"
             ],
-            "time": "2014-10-10 16:41:22"
+            "time": "2014-10-13 16:30:14"
         }
     ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "8806c41c178ad4a2e87294b851d730779555d252"
+                "reference": "f976e5de371104877ebc89bd8fecb0019ed9c119"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8806c41c178ad4a2e87294b851d730779555d252",
-                "reference": "8806c41c178ad4a2e87294b851d730779555d252",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/f976e5de371104877ebc89bd8fecb0019ed9c119",
+                "reference": "f976e5de371104877ebc89bd8fecb0019ed9c119",
                 "shasum": ""
             },
             "require": {
-                "php": "~5.3"
+                "php": ">=5.3,<8.0-DEV"
             },
             "require-dev": {
                 "athletic/athletic": "~0.1.8",
@@ -117,7 +118,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2014-10-04 22:48:25"
+            "time": "2014-10-13 12:58:55"
         },
         {
             "name": "guzzle/guzzle",
@@ -1481,7 +1482,6 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "adammbalogh/key-value-store": 20,
         "satooshi/php-coveralls": 20
     },
     "prefer-stable": false,
