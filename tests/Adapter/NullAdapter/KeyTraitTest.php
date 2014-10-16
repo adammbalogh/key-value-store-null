@@ -3,7 +3,7 @@
 use AdammBalogh\KeyValueStore\Adapter\NullAdapter;
 use AdammBalogh\KeyValueStore\KeyValueStore;
 
-class NullAdapterKeyTest extends \PHPUnit_Framework_TestCase
+class KeyTraitTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var \AdammBalogh\KeyValueStore\Contract\AdapterInterface
@@ -23,11 +23,6 @@ class NullAdapterKeyTest extends \PHPUnit_Framework_TestCase
     public function testExpire()
     {
         $this->assertFalse($this->kvs->expire('key', 0));
-    }
-
-    public function testKeys()
-    {
-        $this->assertEquals([], $this->kvs->getKeys());
     }
 
     /**

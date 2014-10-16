@@ -3,7 +3,7 @@
 use AdammBalogh\KeyValueStore\Adapter\NullAdapter;
 use AdammBalogh\KeyValueStore\KeyValueStore;
 
-class NullAdapterServerTest extends \PHPUnit_Framework_TestCase
+class ValueTraitTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var \AdammBalogh\KeyValueStore\Contract\AdapterInterface
@@ -15,9 +15,17 @@ class NullAdapterServerTest extends \PHPUnit_Framework_TestCase
         $this->kvs = new KeyValueStore(new NullAdapter());
     }
 
-    public function testFlush()
+    /**
+     * @expectedException \AdammBalogh\KeyValueStore\Exception\KeyNotFoundException
+     */
+    public function testGet()
     {
-        $this->assertNull($this->kvs->flush());
+        $this->kvs->get('key');
+    }
+
+    public function testSet()
+    {
+        $this->assertFalse($this->kvs->set('key', 'value'));
     }
 
     public function tearDown()

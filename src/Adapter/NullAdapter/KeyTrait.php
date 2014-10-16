@@ -8,6 +8,8 @@ use AdammBalogh\KeyValueStore\Exception\KeyNotFoundException;
 trait KeyTrait
 {
     /**
+     * Removes a key.
+     *
      * @param string $key
      *
      * @return false
@@ -18,6 +20,8 @@ trait KeyTrait
     }
 
     /**
+     * Sets a key's time to live in seconds.
+     *
      * @param string $key
      * @param int $seconds
      *
@@ -26,14 +30,6 @@ trait KeyTrait
     public function expire($key, $seconds)
     {
         return false;
-    }
-
-    /**
-     * @return array
-     */
-    public function getKeys()
-    {
-        return [];
     }
 
     /**
@@ -49,6 +45,8 @@ trait KeyTrait
     }
 
     /**
+     * Determines if a key exists.
+     *
      * @param string $key
      *
      * @return false
@@ -59,7 +57,7 @@ trait KeyTrait
     }
 
     /**
-     * Remove the existing timeout on key, turning the key from volatile (a key with an expire set)
+     * Removes the existing timeout on key, turning the key from volatile (a key with an expire set)
      * to persistent (a key that will never expire as no timeout is associated).
      *
      * @param string $key

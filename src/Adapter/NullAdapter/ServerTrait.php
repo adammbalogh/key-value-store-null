@@ -3,6 +3,8 @@
 trait ServerTrait
 {
     /**
+     * Removes all keys.
+     *
      * @return void
      */
     public function flush()
